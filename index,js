@@ -2,6 +2,10 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 
+
+// app.get{'/', (req,res) =>{
+ // res.send ()
+//}}
 let view = {
     title: "Joe",
     calc: function () {
@@ -10,3 +14,9 @@ let view = {
   };
   
   let output = Mustache.render("{{title}} spends {{calc}}", view);
+  //adding templates file: render.js
+  function renderHello(){
+    let temp = document.getElementById ('template').innerHTML;
+    let render = Mustache.render (temp, {name:'Luke'});
+    document.getElementById('target').innerHTML = rendered;
+  }
