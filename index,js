@@ -1,0 +1,12 @@
+const express = require('express');
+const app = express();
+const PORT = 3000;
+
+let view = {
+    title: "Joe",
+    calc: function () {
+      return 2 + 4;
+    }
+  };
+  
+  let output = Mustache.render("{{title}} spends {{calc}}", view);
